@@ -1,0 +1,127 @@
+
+#splash{
+    height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    background-color:#f5e6d3;
+}
+#splash button{
+    padding:12px 25px;
+    font-size:18px;
+    border:none;
+    border-radius:10px;
+    cursor:pointer;
+}
+.splash-img{
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+}
+
+#main-content{
+    display: none;
+}
+nav{
+    background-color:palevioletred;
+    padding: 20px;
+    text-align: center;
+}
+nav a{
+    color: blanchedalmond;
+    text-decoration: none;
+    margin: 15px;
+    font-size: 20px;
+}
+#menu section{
+    display:black;
+}
+
+body:has(.page:target)#menu section{
+    display: black;
+    
+}
+
+
+
+#snacks ressarts{
+    display:black;
+}
+
+body:has(.page+target)#snacks ressarts{
+    display: black;
+    
+}
+/* .page{
+    display: none;
+} */
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+h1{
+    background-color: aquamarine;
+    color: black;
+    font-style: oblique;
+}
+
+.logo{
+    text-align: center;
+    background-color: palevioletred;
+}
+.keerthi{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    direction: row;
+    gap: 20px;
+    padding: 10px;
+}
+.card{
+    width: 100px;
+    padding: 10px;
+    border: 20px solid black;
+}
+.card img{
+    width: 100px;
+    height: 100px;
+}
+h3{
+    color: brown;
+}
+p{
+    color: crimson;
+}
+button{
+    background-color: burlywood;
+    color: black;
+}
+.shalu{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    direction: row;
+    gap: 20px;
+    padding: 10px;
+
+}
+.card{
+    width: 100px;
+    padding: 10px;
+    border: 20px solid black;
+}
+.card img{
+    width: 100px;
+    height: 100px;
+    h3{
+    color:palevioletred;
+}
+p{
+    color:blueviolet;
+}
+button{
+    background-color: gray;
+    color:white;
+}

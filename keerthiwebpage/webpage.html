@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="web.css">
+</head>
+<body>
+    <div id="splash">
+        <img src="cafe.png"  class="splash-img" >
+        <h1>WELCOME TO KEERTHI CAFE</h1>
+        <button onclick="enterCafe()">Enter Cafe</button>
+        
+</div>
+    </div>
+    <div id="main-content"  style="display:none;">
+    <h1><center>keerthi cafe</center></h1>
+    <nav>
+    <button onclick="showPage('menu-section')">Menu</button>
+    <button onclick="showPage('snacks-ressarts')">Snacks</button>
+    <button onclick="showPage('about-us')">About Us</button>
+</nav>
+    <section id="menu-section" class="page" style="display: none;">
+    <img src="logo.png">
+    <div class="keerthi">
+        <div class="card">
+            <img src="cold coffee.png">
+            <h3>cold coffee</h3>
+            <p>RS 199</p>
+            <button onclick="addToBill(199); orderSuccess();">Order Now</button>
+            <div class="quantity">
+        <button onclick="decrease(this,199)">-</button>
+
+        <span>0</span>
+
+        <button onclick="increase(this,199)">+</button>
+    </div>
+        </div>
+        <div class="card">
+            <img src="block coffee.png">
+            <h3>block coffee</h3>
+            <p>RS 99</p>
+            <button onclick="orderSuccess()">Order Now</button>
+        </div>
+        <div class="card">
+            <img src="hot white coffee.png">
+            <h3>hot white coffee</h3>
+            <p>RS 299</p>
+            <button onclick="orderSuccess()">Order Now</button>
+        </div>
+        <div class="card">
+            <img src="love coffee.png">
+            <h3>love coffee</h3>
+            <p>RS 199</p>
+           <button onclick="orderSuccess()">Order Now</button>
+        </div>
+        <div class="card">
+            <img src="mocha coffee.png">
+            <h3>mocha coffee</h3>
+            <p>RS 299</p>
+           <button onclick="orderSuccess()">Order Now</button>
+        </div>
+        <div class="card">
+            <img src="latte coffee.png">
+            <h3>latte coffee</h3>
+            <p>RS 299</p>
+            <button onclick="orderSuccess()">Order Now</button>
+        </div>
+        <div class="card">
+            <img src="galao coffee.png">
+            <h3>galao coffee</h3>
+            <p>RS 399</p>
+            <button onclick="orderSuccess()">Order Now</button>
+        </div>
+        <div class="card">
+            <img src="ice cold coffee.png">
+            <h3>ice cold coffee</h3>
+            <p>RS 199</p>
+            <button onclick="orderSuccess()">Order Now</button>
+        </div>
+        <div class="card">
+            <img src="breve coffee.png">
+            <h3>breve coffee</h3>
+            <p>RS 299</p>
+            <button onclick="orderSuccess()">Order Now</button>
+        </div>
+    </div>
+    </section>
+    <section id="snacks-ressarts" class="page" style="display: none;">
+    <div class="shalu">
+        <div class="card">
+            <img src="browni cake.png">
+            <h3>browni cake</h3>
+            <p>RS 99</p>
+           <button onclick="orderSuccess()">Order Now</button>
+        </div>
+        <div class="card">
+            <img src="chocolate cake.png">
+            <h3>chocolate cake</h3>
+            <p>RS 99</p>
+           <button onclick="orderSuccess()">Order Now</button>
+        </div>
+        <div class="card">
+            <img src="donut cake.png">
+            <h3>donut cake</h3>
+            <p>RS 199</p>
+            <button onclick="orderSuccess()">Order Now</button>
+        </div>
+</div>
+</section>
+<section id="about-us" class="page" style="display: none;">
+    <h3>about us</h3>
+</section>
+</div>
+<script>
+           function enterCafe() {
+
+    document.getElementById("splash").style.display = "none";
+
+    document.getElementById("main-content").style.display = "block";
+}
+let total = 0;
+
+function addToBill(price){
+    total += price;
+    orderSuccess();
+}
+function increase(btn, price) {
+
+    let count = btn.previousElementSibling;
+    let value = Number(count.innerHTML);
+
+    value++;
+    count.innerHTML = value;
+}
+
+function decrease(btn, price) {
+
+    let count = btn.nextElementSibling;
+    let value = Number(count.innerHTML);
+
+    if (value > 0) {
+        value--;
+        count.innerHTML = value;
+    }
+}
+
+
+function orderSuccess(){
+    alert("✅ Order Success!\nTotal Bill = ₹" + total);
+}
+function showPage(pageId){
+
+    document.getElementById("menu-section").style.display = "none";
+    document.getElementById("snacks-ressarts").style.display = "none";
+    document.getElementById("about-us").style.display = "none";
+
+    document.getElementById(pageId).style.display = "block";
+}
+</script>
+    
+</body>
+</html>
